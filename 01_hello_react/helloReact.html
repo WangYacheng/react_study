@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello_react</title>
+</head>
+<body>
+    <!--准备容器-->
+    <div id="test"></div>
+
+    <!--引入react核心库-->
+    <script type="text/javascript" src="../js/react.development.js"></script>
+
+    <!--引入 react 扩展库-->
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+
+    <!--引入 babal-->
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <script type="text/babel">
+        // 创建虚拟dom
+        const VDOM=<h1>hello,react</h1>
+
+        // 将虚拟dom渲染到页面
+        ReactDOM.render(VDOM,document.getElementById("test"));
+        console.log("222");
+
+
+        import { ethers } from "ethers"
+
+        const api_key='0a837658af72424b8e9c9ca60effe2a1';
+        const rpc_url="https://goerli.infura.io/v3/0a837658af72424b8e9c9ca60effe2a1";
+
+        const provide = ethers.providers.JsonRpcProvider(rpc_url);
+
+        console.log(provide);
+
+    </script>
+</body>
+</html>
